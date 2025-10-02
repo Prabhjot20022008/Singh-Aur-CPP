@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+void swapByReference(int& a, int& b){
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+int main() {
+    int x = 5, y = 10;
+
+    cout << "Before Swapping :" << endl;
+    cout << "x = " << x << ", y = " << y << endl;
+    swapByReference(x, y);
+    
+    cout << "After Swapping :" << endl;
+    cout << "x = " << x << ", y = " << y << endl;
+    return 0;
+}
